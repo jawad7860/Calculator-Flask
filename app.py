@@ -24,8 +24,10 @@ def Calculate():
 
         return str(result)
 
-    except Exception as e:
-        return e
+    except ZeroDivisionError as ze:
+        return str(ze)
+    except KeyError as ke:
+        return "Key {0} doesn't exist".format(str(ke)) 
     
 if __name__ == '__main__':
 	app.run(host="0.0.0.0")
