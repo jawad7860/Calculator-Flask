@@ -1,9 +1,9 @@
-name: Branch_1_Push
+name: Branch_2_Push
 
 on:
   push:
     branches:
-      - B1
+      - B2
 
 
 jobs:
@@ -19,10 +19,9 @@ jobs:
       with:
         python-version: 3.x
 
-    - name: Install pytest and pylint
+    - name: Install pylint
       run: |
-        pip install pytest
         pip install pylint
 
     - name: Run Pylint
-      run: pylint add.py
+      run: pylint sub.py
